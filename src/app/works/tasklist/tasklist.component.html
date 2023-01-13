@@ -1,0 +1,31 @@
+<header>
+    <h1 class="title">Angular task list</h1>
+  </header>
+  <div class="navigate-block">
+    <div class="navItem" [routerLink]="[ '/works/cenzor' ]" routerLinkActive="active">Cenzor</div>
+    <div class="navItem" [routerLink]="[ '/works/userslist' ]" routerLinkActive="active">Users</div>
+    <div class="navItem work">Task</div>
+    <div class="homeNav navItem" [routerLink]="[ '/home' ]" routerLinkActive="active">Back to >>> Home</div>
+</div>
+<body>
+    <div class="main">
+        <h2 class="user">
+            <span>User: Ivan Ivanov. Count of task</span>
+            <span class="task-count"></span>
+        </h2>
+        <hr>
+        <div class="add-menu-block">
+            <input type="text" name="" [(ngModel)]="addLine" id="">
+            <input type="button" value="Add" class="add" (click)="add()">
+        </div>
+        <hr>
+        <div class="task-list-block">
+            <app-task-table (editTask)="edit($event)"></app-task-table>
+        </div>
+        <div class="edit-block" *ngIf="check">
+            <input type="text" [(ngModel)]="editText" name="" id="" class="text" value="{{editValue}}">
+            <input type="button" value="save" class="button" (click)="save()">
+        </div>
+    </div>
+</body>
+

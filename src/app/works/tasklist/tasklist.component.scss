@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: sans-serif;
+    clear: both;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+body{
+    background-color: white;
+}
+header{
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid black;
+}
+.title{
+    text-align: center;
+    line-height: 70px;
+    margin: 0px;
+    background-color: rgb(215, 215, 215);
+}
+.main{
+    width: 1200px;
+    height: 600px;
+    background-color: rgb(237, 237, 237);
+    margin: 30px auto;
+    h1{
+        font-size: 35px;
+    }
+    .user{
+        line-height: 50px;
+        font-size: 30px;
+    }
+    .add-menu-block{
+        height: 100px;
+        padding:30px 0px;
+        input{
+            width: 920px;
+            height: 45px;
+            border: 1px gray solid;
+            border-radius: 7px;
+            font-size: 20px;
+        }
+        .add{
+            width: 250px;
+            margin-left: 25px;
+            background-color: rgb(4, 156, 4);
+            color: white;
+        }
+    }
+}
+.edit-block{
+    background-color: beige;
+    width: 1000px;
+    height: 70px;
+    position: absolute;
+    top: 600px;
+    left: 250px;
+    .text{
+        width: 200px;
+        height: 40px;
+        margin: 15px 200px 0px 400px;
+        border-radius: 7px;
+        font-size: 20px;
+    }
+    .button{
+        width: 60px;
+        height: 40px;
+        background: green; 
+        margin-top: 15px;
+        color: white;
+        font-size: 17px;
+        border: none;
+        border-radius: 7px;
+    }
+}
+.navigate-block{
+    width: 100%;
+    height: 60px;
+    border: 1px solid rgb(170, 170, 170);
+    border-left: none;
+    border-right: none;
+    display: flex;
+    padding-left: 200px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(22, 149, 254);
+    font-weight: bold;
+    line-height: 50px;
+}
+.navItem{
+    width: 100px;
+    height: 50px;
+    margin: 11px 0px;
+    border-top: 1px solid white;
+    cursor: pointer;
+    &:hover{
+        border: 1.5px solid rgb(170, 170, 170);
+        border-bottom: 2px solid white;
+        border-radius: 7px 7px 0px 0px;
+    }
+}
+.homeNav{
+    width: 250px;
+    margin-left: 50%;
+    color: burlywood;
+}
+.work{
+    color: rgb(13, 159, 13);
+    border: 1.5px solid rgb(170, 170, 170);
+    border-bottom: 2px solid white;
+    border-radius: 7px 7px 0px 0px;
+}

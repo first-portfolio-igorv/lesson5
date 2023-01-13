@@ -1,0 +1,23 @@
+<table>
+    <tr>
+        <td class="first">#</td>
+        <td class="second">Task</td>
+        <td class="third">Check</td>
+        <td class="fourth">Done/In progress</td>
+        <td class="fivth">Edit</td>
+        <td class="sixth">Delete</td>
+    </tr>
+</table>
+<table *ngFor="let task of taskList;index as i">
+    <tr class="tr">
+        <td class="first">{{i+1}}</td>
+        <td class="second">{{task.name}}</td>
+        <td class="third"><input type="checkbox" [checked]="task.check" [(ngModel)]="task.check"></td>
+        <td class="fourth">
+            <span *ngIf="task.check" class="done">Done</span>
+            <span *ngIf="!task.check" class="inPr">In PROGRESS</span>
+        </td>
+        <td class="fivth"><input type="button" value="Edit" class="btn1" (click)="edit(i)"></td>
+        <td class="sixth"><input type="button" value="Delete" class="btn2" (click)="delete(i)" [disabled]="!task.check"></td>
+    </tr>
+</table>

@@ -1,0 +1,57 @@
+table{
+    width: 100%;
+    padding-left: 10px;
+    border-bottom: 1px solid ;
+    .tr{
+        font-size: 20px;
+        font-weight: 100;
+        height: 70px;
+    }
+    tr{
+        height: 40px;
+        font-size: 22px;
+        font-weight: bold;
+        .first{
+            width: 100px;
+            font-weight: bold;
+        }
+        .second{
+            width: 200px;
+        }
+        .third{
+            width: 150px;
+        }
+        .fourth{
+            width: 350px;
+            .done{
+                color: rgb(55, 216, 55);
+            }
+            .inPr{
+                color: red;
+            }
+        }
+        .fivth,
+        .sixth{
+            width: 150px;
+        }
+        .btn1{
+            width: 60px;
+            height: 40px;
+            background-color: orange;
+            border: none;
+            border-radius: 7px;
+            font-size: 18px;
+        }
+        .btn2{
+            width: 100px;
+            height: 40px;
+            background-color: red;
+            border: none;
+            color: white;
+            border-radius: 7px;
+            font-size: 18px;
+
+        }
+    }
+    
+}

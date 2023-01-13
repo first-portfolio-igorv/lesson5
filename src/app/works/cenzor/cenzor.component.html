@@ -1,0 +1,19 @@
+<body>
+    <header>
+        <h1 class="title">List of prohibited words</h1>
+    </header>
+    <div class="navigate-block">
+        <div class="navItem work">Cenzor</div>
+        <div class="navItem" [routerLink]="[ '/works/userslist' ]" routerLinkActive="active">Users</div>
+        <div class="navItem" [routerLink]="[ '/works/tasklist' ]" routerLinkActive="active">Task</div>
+        <div class="homeNav navItem" [routerLink]="[ '/home' ]" routerLinkActive="active">Back to >>> Home</div>
+    </div>
+    <main>
+        <span class="bad-words">Bad words:<span class="words">{{wordsList}}</span></span><br>
+        <input type="text" name="" id="" class="words-line" [(ngModel)]="wordsLine" [placeholder]="placeholder1">
+        <input type="button" value="Add" class="button add" (click)="add()">
+        <input type="button" value="Reset" class="button reset" (click)="reset()">
+        <textarea type="text" name="" id="" class="text" [(ngModel)]="text" [placeholder]="placeholder2"></textarea>
+        <input type="button" value="Cenzor" class="button cenzor" (click)="censor()" placeholder="Write text...">
+    </main>
+</body>

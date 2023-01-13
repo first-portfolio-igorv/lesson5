@@ -1,0 +1,50 @@
+<header>
+  <h1 class="title">Angular users list</h1>
+</header>
+<div class="navigate-block">
+  <div class="navItem" [routerLink]="[ '/works/cenzor' ]" routerLinkActive="active">Cenzor</div>
+  <div class="navItem work">Users</div>
+  <div class="navItem" [routerLink]="[ '/works/tasklist' ]" routerLinkActive="active">Task</div>
+  <div class="homeNav navItem" [routerLink]="[ '/home' ]" routerLinkActive="active">Back to >>> Home</div>
+</div>
+<body>
+    <div class="main">
+      <div class="container1">
+        <h3>Login</h3>
+        <input type="text" [(ngModel)]="login" placeholder="Enter login" class="text">
+        <h3>Password</h3>
+        <input type="password" [(ngModel)]="password" placeholder="Enter password" class="text" >
+        <h3>Email address</h3>
+        <input type="text" [(ngModel)]="email" placeholder="Enter email" class="text" >
+        <input type="button" (click)="add()" value="Add user" class="add" *ngIf="visible">
+        <input type="button" (click)="mainedit()"value="Edit user"class="add  edit1" *ngIf="!visible">
+      </div>
+      <div class="container2">
+        <table>
+          <tr class="title-tr">
+            <hr class="title-hr" />
+            <td class="table-title first">#</td>
+            <td class="table-title second">Login</td>
+            <td class="table-title third">Password</td>
+            <td class="table-title fourth">Email</td>
+            <td class="table-title fivth">Edit</td>
+            <td class="table-title sixth">Delete</td>
+          </tr>
+          <tr class="title-tr" *ngFor="let name of mas;index as i">
+            <hr class="title-hr" />
+            <td class="table-title first">{{i+1}}</td>
+            <td class="table-title second">{{name.login}}</td>
+            <td class="table-title third">{{name.password}}</td>
+            <td class="table-title fourth">{{name.email}}</td>
+            <td class="table-title fivth"><input type="button" value="Edit" class="edit"  name="" (click)="editf(i)"></td>
+            <td class="table-title sixth"><input type="button" value="Delete" class="delete" name="$" (click)="deletef(i)"></td>
+          </tr>
+        </table>
+        <table></table>
+        <hr class="title-hr" />
+        <div class="con2"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
